@@ -40,7 +40,7 @@ async function transfer(repo) {
 
 		console.log(`Moved ${args._.oldOwner}/${repo} to ${args._.newOwner}/${repo}:\n`, text, '\n');
 	} catch (e) {
-		console.error(`Failed	to transfer ${args._.oldOwner}/${repo}.`, e);
+		console.error(`Failed to transfer ${args._.oldOwner}/${repo}.`, e);
 	}
 }
 
@@ -58,11 +58,7 @@ async function init() {
 	}
 
 	for (const repo of repos.map(r => r.name)) {
-		try {
-			await transfer(repo);
-		} catch (e) {
-			console.error('Failed to transfer ' + repo + ':', e);
-		}
+		await transfer(repo);
 	}
 }
 
