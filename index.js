@@ -11,7 +11,7 @@ const args = cli({
 });
 
 async function getRepos() {
-	return await fetch(`https://api.github.com/users/${args._.oldOwner}/repos`, {
+	return await fetch(`https://api.github.com/users/${args._.oldOwner}/repos?per_page=100`, {
 		headers: {
 			'Accept': 'application/vnd.github+json',
 			'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ async function transfer(repo) {
 }
 
 async function init() {
-	const repos = await getRepos() ?? [];
+	const repos = (await getRepos()) ?? [];
 
 	if (repos.documentation_url) {
 		console.error('Encountered an error while fetching errors:', repos);
