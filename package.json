@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "A script to transfer repos from one place to another.",
 	"main": "index.js",
-	"author": "Mario <mariovparaschiv@gmail.com> (github.com/localip)",
+	"author": "Mario <me@marioparaschiv.com> (github.com/marioparaschiv)",
 	"license": "UNLICENSED",
 	"dependencies": {
 		"cleye": "^1.3.2",
