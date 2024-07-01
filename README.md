@@ -25,3 +25,6 @@ This script is limited to 100 repos at once. This is due to a GitHub limit, howe
 ## Usage
 - `bun . oldOwner newOwner` 
 - `node . oldOwner newOwner`
+
+## Licensing
+See [LICENSE](/LICENSE).
